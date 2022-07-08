@@ -1,0 +1,365 @@
+*,
+*::before,
+*::after 
+	box-sizing: inherit
+	margin: 0
+	padding: 0
+
+*:focus
+	outline: 0
+
+
+.container
+	margin: 0 auto
+	padding-left: 40px
+	padding-right: 40px
+
+
+a
+	color: inherit
+	text-decoration: none
+	list-style-type: none
+	cursor: pointer
+
+
+p
+	margin: 0
+
+
+ul
+	list-style-type: none
+	padding: 0
+	margin: 0
+
+
+img
+	max-width: 100%
+
+body,
+header
+	font-family: 'Futura PT', sans-serif
+	font-weight: 400
+	box-sizing: border-box
+	background: #FFF
+
+.content-sidebar-title
+	cursor: initial
+	font-weight: 500
+	margin-bottom: 10px
+	font-size: 14px
+	line-height: 22px
+	color: #000
+
+.excerpt-link
+	font-size: 14px
+	font-weight: 300
+	color: #000
+	line-height: 22px
+	border-bottom: 1px dashed #000
+
+// header//
+
+.header
+	height: 100vh 
+	video
+		position: absolute
+	.header-nav
+		position: relative
+		display: flex
+		justify-content: space-between
+		position: relative
+		padding-top: 4px
+		align-items: center
+		width: 100%
+		top: 0
+		.header-nav-list
+			display: flex
+			width: 20%
+			.header-nav-item
+				margin-right: 30px
+				&:last-child
+						margin-right: 0
+				.header-nav-link
+					color: #ffffff
+					font-weight: 600
+					font-size: 16px
+		.header-nav-logo 
+			width: 20%
+			text-align: center
+			img
+				width: 200px
+				height: 70px
+		.header-nav-social
+			display: flex
+			justify-content: end
+			width: 20%
+			.header-nav-social-item
+				margin-right: 10px
+				&:last-child
+					margin-right: 0
+
+.search
+	.search-block
+		display: flex
+		justify-content: right
+		margin-bottom: 20px
+		.search-link
+			margin-right: 20px
+
+.content
+	.content-block
+		display: flex
+		height: 90vh
+		overflow: hidden
+		margin-bottom: 65px
+		.content-sidebar
+			width: 18%
+			overflow-y: scroll
+			margin-right: 10px
+			.content-sidebar-general
+				margin-bottom: 30px
+				.content-sidebar-general-list
+					.content-sidebar-general-item
+						margin-bottom: 10px
+						.content-sidebar-general-link
+							font-weight: 400
+							font-size: 15px
+							cursor: pointer
+							line-height: 20px
+							transition: all 0.3s ease
+							&:hover
+								opacity: .7
+								font-weight: 600
+							&:focus
+								opacity: .7
+								font-weight: 600
+
+			.content-sidebar-choice
+				margin-bottom: 30px
+				.content-sidebar-choice-list
+					.content-sidebar-choice-item
+						font-size: 14px
+						color: #000
+						line-height: 22px
+						font-weight: 400
+						margin-bottom: 15px
+						opacity: .8
+						label
+							position: relative
+							padding-left: 25px
+							cursor: pointer
+							&::after
+								content: ""
+								border: 2px solid #000
+								width: 20px
+								height: 20px
+								display: block
+								position: absolute
+								top: 1px
+								opacity: .6
+						input
+							display: none
+						input + label
+							&:before
+								display: none
+						input:checked + label
+							opacity: 1
+							&::after
+								opacity: 1
+							&:before
+								content: ''
+								position: absolute
+								display: block
+								left: 8px
+								width: 6px
+								height: 11px
+								top: 4px
+								border: solid #000
+								border-width: 0 2px 2px 0
+								transform: rotate(45deg)
+			
+			.content-sidebar-choice.scroll
+				overflow-y: scroll					
+									
+
+		.content-catalog
+			width: 82%
+			display: flex
+			flex-wrap: wrap
+			overflow: auto
+			.content-catalog-block
+				width: 31%
+				margin-right: 20px
+				min-height: 500px
+				margin-bottom: 20px
+				&:last-child
+					margin-right: 0
+				.content-catalog-block-bg
+					background: url("/img/catalog-product.jpg")
+					background-size: cover
+					min-height: 333px
+					margin-bottom: 20px
+					&:hover
+						background: url("/img/catalog-product1.jpg")
+						background-size: cover
+						min-height: 333px
+						margin-bottom: 20px
+				.content-catalog-link
+					margin-bottom: 20px
+					font-size: 20px
+					line-height: 27px
+					font-weight: 600
+				.content-catalog-block-info
+					display: flex
+					margin-right: 20px
+					.content-catalog-descr
+						font-size: 22px
+						line-height: 30px
+						font-weight: 500
+					.descr-new
+						color: #000
+						margin-right: 10px
+					.descr-old
+						color: #BDBDBD
+						text-decoration: line-through
+				.content-catalog-block-desc
+					color: #f95d51
+					font-size: 14px
+					font-weight: 400
+					margin-top: 10px
+
+	.content-control
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 75px
+		.content-control-link
+			font-size: 15px
+			border-radius: 3px
+			color: #000
+			opacity: .4
+			margin-right: 15px
+			padding: 7px 15px
+			&:focus
+				opacity: 1
+				outline: 1px solid #000
+			&:hover
+				opacity: .4
+				background: #f5f5f5
+			&:last-child
+				transform: translateY(2px)
+				margin-right: 0
+		.content-control-link img
+			transform: translateY(2px)
+
+	.content-description
+		max-width: 760px
+		margin: auto
+		margin-bottom: 75px
+		.content-description-text
+			font-size: 20px
+			font-weight: 300
+			color: #000
+			margin-bottom: 50px
+			line-height: 31px
+			&:last-child
+				margin-bottom: 0
+
+.about
+	background: #000
+	padding-bottom: 165px
+	border-bottom: 1px solid #000
+	padding-top: 100px
+	.about-block
+		display: flex
+		justify-content: space-between
+		.about-bg
+			background: url('/img/about-bg.jpg')
+			background-size: cover
+			width: 41%
+			min-height: 383px
+			border-radius: 10px
+		.about-info
+			width: 50%
+			.about-info-title
+				font-size: 42px
+				color: #fff
+				font-weight: 500
+				text-transform: uppercase
+				line-height: 65px
+			.about-info-descr
+				font-size: 18px
+				line-height: 28px
+				color: #fff
+				font-weight: 400
+
+.footer
+	background: #000
+	.footer-block
+		padding-top: 40px
+		border-top: 1px solid #fff
+		display: flex
+		justify-content: space-between
+		.footer-block-logo
+			width: 21%
+			&>img 
+				max-width: 261px
+				min-height: 90px
+			.footer-logo-link
+				font-size: 18px
+				color: #fff
+				font-weight: 400
+				opacity: 0.5
+				line-height: 30px
+
+		.footer-block-contacts
+			width: 30%
+			display: flex
+			.footer-block-contacts-bg
+				background: url('/img/footer-bg.jpg')
+				background-size: cover
+				max-width: 200px
+				min-height: 180px
+				border-radius: 10px
+				margin-right: 50px
+			.footer-block-contacts-choice
+				.footer-block-address
+					font-size: 22px
+					color: #fff
+					line-height: 34px
+					font-weight: 400
+			
+		.footer-block-social
+			.footer-block-social-flex
+				margin-bottom: 10px
+				.footer-block-social-top
+					display: flex
+					margin-bottom: 10px
+					&:last-child
+						margin-bottom: 0
+					.footer-block-social-link
+						font-size: 22px
+						color: #fff
+						font-weight: 400
+						line-height: 34px
+						margin-right: 20px
+
+			.footer-small
+				.footer-block-small
+					font-size: 14px
+					color: #fff
+					font-weight: 400
+					line-height: 34px
+
+		.footer-arrow
+			.footer-arrow-link img
+				max-width: 101px
+				min-height: 101px
+
+
+
+			
+
+
+	
+
