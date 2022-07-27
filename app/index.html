@@ -7,13 +7,30 @@
 		<title>stonecityofficial</title>
 		<link href="http://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
 		<link href="css/app.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	</head>
 	<body>
 		<header class="header">
 			<video style="object-fit: cover; background-size: cover; width: 100%; height: 100%;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="http://dl.dropboxusercontent.com/s/3zrixaof24n1kp5/stone%20NEW.m4v?dl=0" type="video/mp4"></video>
 			<div class="container">
+        <a href="#" class="btn-header burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </a>
 				<div class="header-nav">
+          <div class="cross"> 
+            <span style="background-color:#ffffff;"></span> 
+            <span style="background-color:#ffffff;"></span> 
+            <span style="background-color:#ffffff;"></span> 
+            <span style="background-color:#ffffff;"></span> 
+          </div>
 					<ul class="header-nav-list">
+						<li class="header-nav-item mobile">
+							<a href="" class="header-nav-link">
+								Главная
+							</a>
+						</li>
 						<li class="header-nav-item">
 							<a href="" class="header-nav-link">
 								О нас
@@ -25,7 +42,7 @@
 							</a>
 						</li>
 						<li class="header-nav-item">
-							<a href="" class="header-nav-link">
+							<a href="#contacts" class="header-nav-link">
 								Контакты
 							</a>
 						</li>
@@ -58,7 +75,8 @@
         <div class="container">
           <div class="search-block">
             <div class="search-link">
-              поиск
+              <input class="search-link-input" type="text" placeholder="">
+              <img class="search-link-images" src="/img/search.svg">
             </div>
             <select class="search-block-select"><option>Порядок: по умолчанию</option>
               <option>Цена: по возрастанию</option>
@@ -138,6 +156,12 @@
                 <p class="content-sidebar-title">
                   Цена
                 </p>
+                <div class="polzunok-container">
+                  <div class="polzunok"></div>
+                  <input type="text" class="polzunok-input-left" value="700" min="0" max="6000" />
+                  <span>—</span>
+                  <input type="text" class="polzunok-input-right " value="19990" min="0" max="6000" />
+                </div>
               </div>
               <div class="content-sidebar-choice">
                 <p class="content-sidebar-title">
@@ -1075,7 +1099,7 @@
         </div>
       </section>
 		</main>
-		<footer class="footer">
+		<footer id="contacts" class="footer">
       <div class="container">
         <div class="footer-block">
           <div class="footer-block-logo">
@@ -1104,13 +1128,13 @@
                 <a href="#" class="footer-block-social-link">
                   Доставка
                 </a>
-                <a href="https://t.me/stonecity_official" class="footer-block-social-link">
-                  Telegram
+                <a href="#" class="footer-block-social-link">
+                  О нас
                 </a>
               </div>
               <div class="footer-block-social-top">
-                <a href="#" class="footer-block-social-link">
-                  О нас
+                <a href="https://t.me/stonecity_official" class="footer-block-social-link">
+                  Telegram
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=79057497499&" class="footer-block-social-link">
                   WhatsApp
@@ -1131,5 +1155,10 @@
         </div>
       </div>
 		</footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>
