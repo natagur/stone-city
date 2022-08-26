@@ -7,9 +7,11 @@
 		<title>stonecityofficial</title>
 		<link href="http://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
 		<link href="css/app.min.css" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.18/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
-	<body>
+	<body class="body">
 		<header class="header">
 			<video style="object-fit: cover; background-size: cover; width: 100%; height: 100%;" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="http://dl.dropboxusercontent.com/s/3zrixaof24n1kp5/stone%20NEW.m4v?dl=0" type="video/mp4"></video>
 			<div class="container">
@@ -19,25 +21,25 @@
           <span class="burger-line"></span>
         </a>
 				<div class="header-nav">
-          <div class="cross"> 
-            <span style="background-color:#ffffff;"></span> 
-            <span style="background-color:#ffffff;"></span> 
-            <span style="background-color:#ffffff;"></span> 
-            <span style="background-color:#ffffff;"></span> 
-          </div>
 					<ul class="header-nav-list">
+            <div class="cross"> 
+              <span style="background-color:#ffffff;"></span> 
+              <span style="background-color:#ffffff;"></span> 
+              <span style="background-color:#ffffff;"></span> 
+              <span style="background-color:#ffffff;"></span> 
+            </div>
 						<li class="header-nav-item mobile">
 							<a href="" class="header-nav-link">
 								Главная
 							</a>
 						</li>
 						<li class="header-nav-item">
-							<a href="" class="header-nav-link">
+							<a href="#about" class="header-nav-link">
 								О нас
 							</a>
 						</li>
 						<li class="header-nav-item">
-							<a href="" class="header-nav-link">
+							<a href="/delivery.html" class="header-nav-link">
 								Доставка
 							</a>
 						</li>
@@ -50,6 +52,9 @@
 					<a class="header-nav-logo" href="#">
 						<img src="/img/header-logo.png">
 					</a>
+          <address class="address-mobile">
+            Москва, Артековская 1А
+          </address>
 					<ul class="header-nav-social">
 						<li class="header-nav-social-item">
 							<a href="#" class="header-nav-social-link header-vk">
@@ -71,6 +76,7 @@
 			</div>
 		</header>
 		<main class="main">
+      <div class="border"></div>
       <section class="search">
         <div class="container">
           <div class="search-block">
@@ -152,338 +158,405 @@
 									</li>
 								</ul>
 							</div>
-              <div class="content-sidebar-slider">
-                <p class="content-sidebar-title">
-                  Цена
-                </p>
-                <div class="polzunok-container">
-                  <div class="polzunok"></div>
-                  <input type="text" class="polzunok-input-left" value="700" min="0" max="6000" />
-                  <span>—</span>
-                  <input type="text" class="polzunok-input-right " value="19990" min="0" max="6000" />
+              <div class="content-block-filter">
+                <div class="filter-click">
+                  <svg class="icon-filter" width="23" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.42 100"><defs><style>.cls-1{fill:#1d1d1b;}</style></defs><title>2Монтажная область 1 копия</title><path class="cls-1" d="M13.75,22.59V.38h-6V22.59a10.75,10.75,0,0,0,0,20.64V99.62h6V43.23a10.75,10.75,0,0,0,0-20.64Z"></path><path class="cls-1" d="M63.42,67.09a10.75,10.75,0,0,0-7.75-10.32V.38h-6V56.77a10.75,10.75,0,0,0,0,20.64V99.62h6V77.41A10.75,10.75,0,0,0,63.42,67.09Z"></path></svg>
+                  <p class="filter-desc">Фильтры</p>
                 </div>
+                <svg class="t-store__filter__search-mob-btn-icon" width="23" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88"> <path fill="#3f3f3f" d="M85 31.1c-.5-8.7-4.4-16.6-10.9-22.3C67.6 3 59.3 0 50.6.6c-8.7.5-16.7 4.4-22.5 11-11.2 12.7-10.7 31.7.6 43.9l-5.3 6.1-2.5-2.2-17.8 20 9 8.1 17.8-20.2-2.1-1.8 5.3-6.1c5.8 4.2 12.6 6.3 19.3 6.3 9 0 18-3.7 24.4-10.9 5.9-6.6 8.8-15 8.2-23.7zM72.4 50.8c-9.7 10.9-26.5 11.9-37.6 2.3-10.9-9.8-11.9-26.6-2.3-37.6 4.7-5.4 11.3-8.5 18.4-8.9h1.6c6.5 0 12.7 2.4 17.6 6.8 5.3 4.7 8.5 11.1 8.9 18.2.5 7-1.9 13.8-6.6 19.2z"></path></svg>
               </div>
-              <div class="content-sidebar-choice">
-                <p class="content-sidebar-title">
-                  Наличие
-                </p>
-                <ul class="content-sidebar-choice-list">
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox1">
-                    <label for="checkbox1">
-                      Только товары в наличии
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="content-sidebar-choice">
-                <p class="content-sidebar-title">
-                  Размер
-                </p>
-                <ul class="content-sidebar-choice-list">
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox2">
-                    <label for="checkbox2">
-                      A10 | RU 142cm
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox3">
-                    <label for="checkbox3">
-                      A12 | RU 156cm
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox4">
-                    <label for="checkbox4">
-                      A2 | RU 92см
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox5">
-                    <label for="checkbox5">
-                      A4 | RU 104cm
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox6">
-                    <label for="checkbox6">
-                      A6 | RU 116cm
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox7">
-                    <label for="checkbox7">
-                      A8 | RU 128cm
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox8">
-                    <label for="checkbox8">
-                      L | RU 50
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox9">
-                    <label for="checkbox9">
-                      M | RU 48
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox10">
-                    <label for="checkbox10">
-                      S | RU 46
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox11">
-                    <label for="checkbox11">
-                      W 32 | RU 48
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox12">
-                    <label for="checkbox12">
-                      W 34 | RU 50
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox13">
-                    <label for="checkbox13">
-                      W 36 | RU 52
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox14">
-                    <label for="checkbox14">
-                      W 38 | RU 54
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox15">
-                    <label for="checkbox15">
-                      XL | RU 52
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox16">
-                    <label for="checkbox16">
-                      XXL | RU 54
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox17">
-                    <label for="checkbox17">
-                      XXXL | RU 56
-                    </label>
-                  </li>
-                </ul>
-                <div class="content-sidebar-excerpt">
-                  <a href="#" class="excerpt-link">
-                    Показать все
+              <div class="content-sidebar-slider-block">
+                <div class="search-block mobile">
+                  <a href="#" class="mobile-link">
+                    Сортировка
                   </a>
-                  <a href="#" class="excerpt-link">
-                    Свернуть
-                  </a>
+                  <ul class="mobile-link-list">
+                    <li class="mobile-link-item">
+                      <a href="#" class="mobile-link-choice">
+                        Цена: по убыванию
+                      </a>
+                    </li>
+                    <li class="mobile-link-item">
+                      <a href="#" class="mobile-link-choice">
+                        Порядок: сперва старые
+                      </a>
+                    </li>
+                    <li class="mobile-link-item">
+                      <a href="#" class="mobile-link-choice">
+                        Порядок: сперва новые
+                      </a>
+                    </li>
+                    <li class="mobile-link-item">
+                      <a href="#" class="mobile-link-choice">
+                        Цена: по возрастанию
+                      </a>
+                    </li>
+                    <li class="mobile-link-item">
+                      <a href="#" class="mobile-link-choice">
+                        Название: А—Я
+                      </a>
+                    </li>
+                    <li class="mobile-link-item">
+                      <a href="#" class="mobile-link-choice">
+                        Название: Я—А
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <div class="content-sidebar-choice">
-                <p class="content-sidebar-title">
-                  Раздел
-                </p>
-                <ul class="content-sidebar-choice-list">
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox18">
-                    <label for="checkbox18">
-                      Аксессуары
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox19">
-                    <label for="checkbox19">
-                      Верхняя одежда
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox20">
-                    <label for="checkbox20">
-                      Детская одежда
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox21">
-                    <label for="checkbox21">
-                      Олимпийки
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox22">
-                    <label for="checkbox22">
-                      Свитшоты
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox23">
-                    <label for="checkbox23">
-                      Спортивные костюмы
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox24">
-                    <label for="checkbox24">
-                      Футболки и поло
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox25">
-                    <label for="checkbox25">
-                      Худи
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox26">
-                    <label for="checkbox26">
-                      Штаны и шорты
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="content-sidebar-choice scroll">
-                <p class="content-sidebar-title">
-                  Цвет
-                </p>
-                <ul class="content-sidebar-choice-list">
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox27">
-                    <label for="checkbox27">
-                      Бежевый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox28">
-                    <label for="checkbox28">
-                      Белый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox29">
-                    <label for="checkbox29">
-                      Бирюзовый (мятный)
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox30">
-                    <label for="checkbox30">
-                      Бордовый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox31">
-                    <label for="checkbox31">
-                      Голубой
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox32">
-                    <label for="checkbox32">
-                      Желтый (лимонный)
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox33">
-                    <label for="checkbox33">
-                      Зеленый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox34">
-                    <label for="checkbox34">
-                      Зеленый (хаки)
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox35">
-                    <label for="checkbox35">
-                      Красный
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item">
-                    <input type="checkbox" id="checkbox36">
-                    <label for="checkbox36">
-                      Небесный
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox37">
-                    <label for="checkbox37">
-                      Оранжевый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox38">
-                    <label for="checkbox38">
-                      Розовый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox39">
-                    <label for="checkbox39">
-                      Серый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox40">
-                    <label for="checkbox40">
-                      Синий
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox41">
-                    <label for="checkbox41">
-                      Темно-зеленый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox42">
-                    <label for="checkbox42">
-                      Темно-серый
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox43">
-                    <label for="checkbox43">
-                      Темно-синий
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox44">
-                    <label for="checkbox44">
-                      Фисташка
-                    </label>
-                  </li>
-                  <li class="content-sidebar-choice-item invisible">
-                    <input type="checkbox" id="checkbox45">
-                    <label for="checkbox45">
-                      Черный
-                    </label>
-                  </li>
-                </ul>
-                <div class="content-sidebar-excerpt">
-                  <a href="#" class="excerpt-link">
-                    Показать все
+                <div class="content-sidebar-slider">
+                  <p class="content-sidebar-title">
+                    Цена
+                  </p>
+                  <a href="#" class="mobile-link">
+                    Цена
                   </a>
-                  <a href="#" class="excerpt-link">
-                    Свернуть
+                  <div class="polzunok-container mobile-link-list">
+                    <div class="polzunok"></div>
+                    <input type="text" class="polzunok-input-left" value="700" min="0" max="6000" />
+                    <span>—</span>
+                    <input type="text" class="polzunok-input-right " value="19990" min="0" max="6000" />
+                    <div class="">
+                      <a href="#" class="polzunok-link">ок</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-sidebar-choice">
+                  <p class="content-sidebar-title">
+                    Наличие
+                  </p>
+                  <a href="#" class="mobile-link">
+                    Наличие
                   </a>
+                  <ul class="content-sidebar-choice-list mobile-link-list">
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox1">
+                      <label for="checkbox1">
+                        Только товары в наличии
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content-sidebar-choice">
+                  <p class="content-sidebar-title">
+                    Размер
+                  </p>
+                  <a href="#" class="mobile-link">
+                    Размер
+                  </a>
+                  <ul class="content-sidebar-choice-list mobile-link-list">
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox2">
+                      <label for="checkbox2">
+                        A10 | RU 142cm
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox3">
+                      <label for="checkbox3">
+                        A12 | RU 156cm
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox4">
+                      <label for="checkbox4">
+                        A2 | RU 92см
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox5">
+                      <label for="checkbox5">
+                        A4 | RU 104cm
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox6">
+                      <label for="checkbox6">
+                        A6 | RU 116cm
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox7">
+                      <label for="checkbox7">
+                        A8 | RU 128cm
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox8">
+                      <label for="checkbox8">
+                        L | RU 50
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox9">
+                      <label for="checkbox9">
+                        M | RU 48
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox10">
+                      <label for="checkbox10">
+                        S | RU 46
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox11">
+                      <label for="checkbox11">
+                        W 32 | RU 48
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox12">
+                      <label for="checkbox12">
+                        W 34 | RU 50
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox13">
+                      <label for="checkbox13">
+                        W 36 | RU 52
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox14">
+                      <label for="checkbox14">
+                        W 38 | RU 54
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox15">
+                      <label for="checkbox15">
+                        XL | RU 52
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox16">
+                      <label for="checkbox16">
+                        XXL | RU 54
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox17">
+                      <label for="checkbox17">
+                        XXXL | RU 56
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="content-sidebar-excerpt">
+                    <a href="#" class="excerpt-link open">
+                      Показать все
+                    </a>
+                    <a href="#" class="excerpt-link close">
+                      Свернуть
+                    </a>
+                  </div>
+                </div>
+                <div class="content-sidebar-choice">
+                  <p class="content-sidebar-title">
+                    Раздел
+                  </p>
+                  <a href="#" class="mobile-link">
+                    Раздел
+                  </a>
+                  <ul class="content-sidebar-choice-list mobile-link-list">
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox18">
+                      <label for="checkbox18">
+                        Аксессуары
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox19">
+                      <label for="checkbox19">
+                        Верхняя одежда
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox20">
+                      <label for="checkbox20">
+                        Детская одежда
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox21">
+                      <label for="checkbox21">
+                        Олимпийки
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox22">
+                      <label for="checkbox22">
+                        Свитшоты
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox23">
+                      <label for="checkbox23">
+                        Спортивные костюмы
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox24">
+                      <label for="checkbox24">
+                        Футболки и поло
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox25">
+                      <label for="checkbox25">
+                        Худи
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox26">
+                      <label for="checkbox26">
+                        Штаны и шорты
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content-sidebar-choice scroll">
+                  <p class="content-sidebar-title">
+                    Цвет
+                  </p>
+                  <a href="#" class="mobile-link">
+                    Цвет
+                  </a>
+                  <ul class="content-sidebar-choice-list mobile-link-list">
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox27">
+                      <label for="checkbox27">
+                        Бежевый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox28">
+                      <label for="checkbox28">
+                        Белый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox29">
+                      <label for="checkbox29">
+                        Бирюзовый (мятный)
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox30">
+                      <label for="checkbox30">
+                        Бордовый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox31">
+                      <label for="checkbox31">
+                        Голубой
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox32">
+                      <label for="checkbox32">
+                        Желтый (лимонный)
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox33">
+                      <label for="checkbox33">
+                        Зеленый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox34">
+                      <label for="checkbox34">
+                        Зеленый (хаки)
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox35">
+                      <label for="checkbox35">
+                        Красный
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item">
+                      <input type="checkbox" id="checkbox36">
+                      <label for="checkbox36">
+                        Небесный
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox37">
+                      <label for="checkbox37">
+                        Оранжевый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox38">
+                      <label for="checkbox38">
+                        Розовый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox39">
+                      <label for="checkbox39">
+                        Серый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox40">
+                      <label for="checkbox40">
+                        Синий
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox41">
+                      <label for="checkbox41">
+                        Темно-зеленый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox42">
+                      <label for="checkbox42">
+                        Темно-серый
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox43">
+                      <label for="checkbox43">
+                        Темно-синий
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox44">
+                      <label for="checkbox44">
+                        Фисташка
+                      </label>
+                    </li>
+                    <li class="content-sidebar-choice-item invisible">
+                      <input type="checkbox" id="checkbox45">
+                      <label for="checkbox45">
+                        Черный
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="content-sidebar-excerpt">
+                    <a href="#" class="excerpt-link open">
+                      Показать все
+                    </a>
+                    <a href="#" class="excerpt-link close">
+                      Свернуть
+                    </a>
+                  </div>
                 </div>
               </div>
 						</div>
 						<div class="content-catalog">
-              <div class="content-catalog-block">
+              <div class="content-catalog-block" data-delighter>
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -495,11 +568,14 @@
                   </p>
                 </div>
               </div>
-              <div class="content-catalog-block">
+              <div class="content-catalog-block" data-delighter>
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Спортивный костюм летний Stone Island черный
                 </a>
                 <div class="content-catalog-block-info">
@@ -511,11 +587,14 @@
                   </p>
                 </div>
               </div>
-              <div class="content-catalog-block">
+              <div class="content-catalog-block" data-delighter>
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -528,10 +607,13 @@
                 </div>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -544,10 +626,13 @@
                 </div>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -560,48 +645,13 @@
                 </div>
               </div>
               <div class="content-catalog-block">
-                <div class="content-catalog-block-bg">
-
-                </div>
-                <a href="#" class="content-catalog-link">
-                  Зип худи Stone Island черная 64220
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
                 </a>
-                <div class="content-catalog-block-info">
-                  <p class="content-catalog-descr descr-new">
-                    8 990 р.
-                  </p>
-                  <p class="content-catalog-descr descr-old">
-                    9 990 р.
-                  </p>
-                </div>
-                <p class="content-catalog-block-desc">
-                  Нет в наличии
-                </p>
-              </div>
-              <div class="content-catalog-block">
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
-                  Зип худи Stone Island черная 64220
-                </a>
-                <div class="content-catalog-block-info">
-                  <p class="content-catalog-descr descr-new">
-                    8 990 р.
-                  </p>
-                  <p class="content-catalog-descr descr-old">
-                    9 990 р.
-                  </p>
-                </div>
-                <p class="content-catalog-block-desc">
-                  Нет в наличии
-                </p>
-              </div>
-              <div class="content-catalog-block">
-                <div class="content-catalog-block-bg">
-
-                </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -617,10 +667,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -636,10 +689,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -655,10 +711,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -674,10 +733,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -693,10 +755,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -712,10 +777,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -731,10 +799,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -750,10 +821,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -769,10 +843,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -788,10 +865,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -807,10 +887,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -826,10 +909,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -845,10 +931,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -864,10 +953,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -883,10 +975,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -902,10 +997,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -921,10 +1019,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -940,10 +1041,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -959,10 +1063,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -978,10 +1085,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -997,10 +1107,57 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
+                  Зип худи Stone Island черная 64220
+                </a>
+                <div class="content-catalog-block-info">
+                  <p class="content-catalog-descr descr-new">
+                    8 990 р.
+                  </p>
+                  <p class="content-catalog-descr descr-old">
+                    9 990 р.
+                  </p>
+                </div>
+                <p class="content-catalog-block-desc">
+                  Нет в наличии
+                </p>
+              </div> 
+              <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
+                <div class="content-catalog-block-bg">
+
+                </div>
+                <a href="/product.html" class="content-catalog-link">
+                  Зип худи Stone Island черная 64220
+                </a>
+                <div class="content-catalog-block-info">
+                  <p class="content-catalog-descr descr-new">
+                    8 990 р.
+                  </p>
+                  <p class="content-catalog-descr descr-old">
+                    9 990 р.
+                  </p>
+                </div>
+                <p class="content-catalog-block-desc">
+                  Нет в наличии
+                </p>
+              </div> 
+              <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
+                <div class="content-catalog-block-bg">
+
+                </div>
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -1016,10 +1173,13 @@
                 </p>
               </div>
               <div class="content-catalog-block">
+                <a href="#" class="content-catalog-icon">
+                  <svg width="23" height="22" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+                </a>
                 <div class="content-catalog-block-bg">
 
                 </div>
-                <a href="#" class="content-catalog-link">
+                <a href="/product.html" class="content-catalog-link">
                   Зип худи Stone Island черная 64220
                 </a>
                 <div class="content-catalog-block-info">
@@ -1068,32 +1228,34 @@
           </div>
 				</div>
 			</section>
-      <section class="about">
+      <section id="about" class="about">
         <div class="container">
           <div class="about-block">
             <div class="about-bg">
 
             </div>
             <div class="about-info">
-              <h1 class="about-info-title">
+              <h1 class="about-info-title delighter started" data-delighter>
                 STONE CITY
               </h1>
-              <p class="about-info-descr">
-                Онлайн и оффлайн магазин одежды и аксессуаров бренда Stone island.
-              </p>
-              <p class="about-info-descr">
-                Мы специализируемся только на этом бренде, что позволяет нам оставаться лучшими и детально фокусироваться на качестве реализуемой продукции.
-              </p>
-              <p class="about-info-descr">
-                У нас вы найдете одежду SI только лучшего качества. Наши товары проходят тщательный отбор, вся фурнитура собрана из оригинальных материалов.
-              </p>
-              <p class="about-info-descr">
-                Пуговицы, патч, бирки, лекало - все идентично оригинальной продукции,
-                в этом вы можете убедиться лично, посетив наш шоурум.
-              </p>
-              <p class="about-info-descr">
-                Так же в нашем телеграм канале вы можете ознакомиться с обзорами реализуемой нами продукции, детальными фото и видео подтверждающими качество!
-              </p>
+              <div class="delighter started" data-delighter>
+                <p class="about-info-descr">
+                  Онлайн и оффлайн магазин одежды и аксессуаров бренда Stone island.
+                </p>
+                <p class="about-info-descr">
+                  Мы специализируемся только на этом бренде, что позволяет нам оставаться лучшими и детально фокусироваться на качестве реализуемой продукции.
+                </p>
+                <p class="about-info-descr">
+                  У нас вы найдете одежду SI только лучшего качества. Наши товары проходят тщательный отбор, вся фурнитура собрана из оригинальных материалов.
+                </p>
+                <p class="about-info-descr">
+                  Пуговицы, патч, бирки, лекало - все идентично оригинальной продукции,
+                  в этом вы можете убедиться лично, посетив наш шоурум.
+                </p>
+                <p class="about-info-descr">
+                  Так же в нашем телеграм канале вы можете ознакомиться с обзорами реализуемой нами продукции, детальными фото и видео подтверждающими качество!
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -1102,15 +1264,15 @@
 		<footer id="contacts" class="footer">
       <div class="container">
         <div class="footer-block">
-          <div class="footer-block-logo">
+          <div class="footer-block-logo delighter started" data-delighter>
             <img src="/img/header-logo.png">
             <a href="#" class="footer-logo-link">
               Сайт разработан elstudio
             </a>
           </div>
           <div class="footer-block-contacts">
-            <div class="footer-block-contacts-bg"></div>
-            <div class="footer-block-contacts-choice">
+            <div class="footer-block-contacts-bg delighter started" data-delighter></div>
+            <div class="footer-block-contacts-choice delighter started" data-delighter>
               <address class="footer-block-address">
                 Москва, Артековская 1А
               </address>
@@ -1120,19 +1282,23 @@
               <a href="tel:+79057497499" class="footer-block-address">
                 79057497499
               </a>
+              <a href="#" class="footer-block-small mobile">
+                Политика конфиденциальности
+              </a>
             </div>
           </div>
           <div class="footer-block-social">
             <div class="footer-block-social-flex">
+              <img class="footer-logo" src="/img/header-logo.png">
               <div class="footer-block-social-top">
-                <a href="#" class="footer-block-social-link">
+                <a href="#" class="footer-block-social-link delighter started" data-delighter>
                   Доставка
                 </a>
-                <a href="#" class="footer-block-social-link">
+                <a href="#" class="footer-block-social-link delighter started" data-delighter>
                   О нас
                 </a>
               </div>
-              <div class="footer-block-social-top">
+              <div class="footer-block-social-top delighter started" data-delighter>
                 <a href="https://t.me/stonecity_official" class="footer-block-social-link">
                   Telegram
                 </a>
@@ -1140,9 +1306,15 @@
                   WhatsApp
                 </a>
               </div>
+              <a href="#" class="footer-block-small mobile delighter started" data-delighter>
+                Политика конфиденциальности
+              </a>
             </div>
             <small class="footer-small">
-              <a href="#" class="footer-block-small">
+              <a href="#" class="footer-logo-link mobile">
+                Сайт разработан elstudio
+              </a>
+              <a href="#" class="footer-block-small delighter started" data-delighter>
                 Политика конфиденциальности
               </a>
             </small>
@@ -1155,10 +1327,254 @@
         </div>
       </div>
 		</footer>
+    <div class="popup">
+      <a href="#" class="close">
+        <svg role="presentation" class="t706__cartwin-close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd"> <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect> <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect> </g> </svg>
+      </a>
+      <div class="wrapper">
+        <div class="popup-content">
+          <h2 class="popup-title">Ваш заказ:</h2>
+          <div class="popup-item">
+            <div class="popup-content-block">
+              <div class="popup-content-bg"></div>
+              <div class="popup-content-info">
+                <a href="/product.html" class="popup-link">
+                  Зип худи Stone Island черная 64220
+                </a>
+                <a href="#" class="popup-content-amount-link mobile">
+                  <svg style="width:16px;height:16px;border:0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g>
+                      <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="18.947" y1="17.153" x2="45.045" y2="43.056"></line>
+                    </g>
+                    <g>
+                      <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="19.045" y1="43.153" x2="44.947" y2="17.056"></line>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="32" cy="32" r="30.999"></circle>
+                    </g>
+                  </svg>
+                </a>
+                <p class="popup-descr">
+                  Размер: S | RU 46
+                </p>
+                <p class="popup-descr">
+                  Цвет: Черный
+                </p>
+                <p class="popup-descr">
+                  751564220 V.0029
+                </p>
+              </div>
+              <div class="popup-content-amount">
+                <div class="popup-content-amount-left">
+                  <a href="#" class="popup-minus">
+                    <svg style="width:16px;height:16px;border:0" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g>
+                      <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="14" y1="31" x2="50" y2="31"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                    </svg>
+                  </a>
+                  <input type="text" class="popup-input" placeholder="1" value="1">
+                  <a href="#" class="popup-plus">
+                    <svg style="width:16px;height:16px;border:0" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g>
+                    <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="32" y1="50" x2="32" y2="14"/>
+                    <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="14" y1="32" x2="50" y2="32"/>
+                    </g>
+                    <g>
+                    <circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                    </svg>
+                  </a>
+                </div>
+                <div class="popup-content-amount-right">
+                  <p class="popup-content-amount-descr">
+                    17 980р.
+                  </p>
+                  <a href="#" class="popup-content-amount-link">
+                    <svg style="width:16px;height:16px;border:0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                      <g>
+                        <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="18.947" y1="17.153" x2="45.045" y2="43.056"/>
+                      </g>
+                      <g>
+                        <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="19.045" y1="43.153" x2="44.947" y2="17.056"/>
+                      </g>
+                      <g>
+                        <circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="popup-content-block delete">
+              <div class="popup-content-animation">
+                <p class="timer-desc">4</p>
+                <svg class="timer-icon">                                    
+                  <circle r="10" cx="12" cy="12"></circle>                                
+                </svg>
+              </div>
+              <div class="popup-content-info">
+                <p class="popup-descr">
+                  Вы удалили "Зип худи Stone Island DUST COLOR темно-серая 62190"
+                </p>
+              </div>
+              <div class="popup-content-amount">
+                <a href="#" class="delete-link">Вернуть</a>
+              </div>
+            </div>
+          </div>
+          <div class="form-block">
+            <p class="form-block-descr">Сумма: 8 990р.</p>
+            <form action="" class="form">
+              <p class="form-descr">ФИО</p>
+              <input type="text" class="form-input">
+              <p class="form-descr">Ваш Email</p>
+              <input type="email" id="email" class="form-input">
+              <p class="form-descr" >Ваш номер телефона</p>
+              <input type="tel" id="phone" class="form-input" placeholder="+7 (999) 999-99-99" maxlength="15" >
+              <p class="form-descr">Комментарий</p>
+              <textarea name="" id="" cols="30" rows="10" class="form-textarea"></textarea>
+              <p class="form-descr">Варианты доставки</p>
+              <div class="form-radio">
+                <input type="radio" id="radio" name="radio">
+                <label for="radio">
+                  Самовывоз из магазина
+                </label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" id="radio1" name="radio">
+                <label for="radio1">
+                  Доставка СДЭК от 300 руб ( Рассчитывается индивидуально )
+                </label>
+              </div>
+              <div class="form-radio">
+                <input type="radio" id="radio2" name="radio">
+                <label for="radio2">
+                  Доставка курьером по Москве 500 руб
+                </label>
+              </div>
+              <p class="form-descr">Ваш адрес (Если вы заказываете доставку)</p>
+              <input type="tel" class="form-input" placeholder="Москва, Лубянка 26, кв 9">
+              <p class="form-descr">Номер карты постоянного покупателя</p>
+              <input type="tel" class="form-input" placeholder="00000">
+              <div class="form-price">
+                <span class="form-price-span">
+                  Сумма:8 990р.
+                </span>
+                <p class="form-price-descr">
+                  Итоговая сумма: 8 990р.
+                </p>
+              </div>
+              <button class="form-button">
+                Заказать
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-favorites">
+      <a href="#" class="close">
+        <svg role="presentation" class="t706__cartwin-close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g stroke="none" stroke-width="1" fill="#000" fill-rule="evenodd"> <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect> <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect> </g> </svg>
+      </a>
+      <div class="wrapper">
+        <div class="popup-content">
+          <h2 class="popup-title">Избранное:</h2>
+          <div class="popup-item">
+            <div class="popup-content-block">
+              <div class="popup-content-bg"></div>
+              <div class="popup-content-info">
+                <a href="/product.html" class="popup-link">
+                  Зип худи Stone Island черная 64220
+                </a>
+                <a href="#" class="popup-content-amount-link mobile">
+                  <svg style="width:16px;height:16px;border:0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g>
+                      <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="18.947" y1="17.153" x2="45.045" y2="43.056"></line>
+                    </g>
+                    <g>
+                      <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="19.045" y1="43.153" x2="44.947" y2="17.056"></line>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="32" cy="32" r="30.999"></circle>
+                    </g>
+                  </svg>
+                </a>
+                <p class="popup-descr">
+                  Размер: S | RU 46
+                </p>
+                <p class="popup-descr">
+                  Цвет: Черный
+                </p>
+                <p class="popup-descr">
+                  751564220 V.0029
+                </p>
+              </div>
+              <div class="popup-content-amount">
+                <div class="popup-content-amount-right">
+                  <p class="popup-content-amount-descr">
+                    17 980р.
+                  </p>
+                  <a href="#" class="popup-content-amount-link">
+                    <svg style="width:16px;height:16px;border:0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                      <g>
+                        <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="18.947" y1="17.153" x2="45.045" y2="43.056"/>
+                      </g>
+                      <g>
+                        <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="19.045" y1="43.153" x2="44.947" y2="17.056"/>
+                      </g>
+                      <g>
+                        <circle fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="favorites">
+      <a href="#" class="content-catalog-icon favorites-icon">
+        <svg class="favorites-icon-link" width="34" height="34" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6.32647C20 11.4974 10.5 17 10.5 17C10.5 17 1 11.4974 1 6.32647C1 -0.694364 10.5 -0.599555 10.5 5.57947C10.5 -0.599555 20 -0.507124 20 6.32647Z" stroke="black" stroke-linejoin="round"></path></svg>
+      </a>
+      <div class="basket-amount">1</div>
+    </div>
+    <div class="basket">
+      <a href="#" class="basket-icon">
+        <svg role="img" class="basket-icon-link" style="stroke: #000; width: 34px; height: 34px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M44 18h10v45H10V18h10z"></path> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M22 24V11c0-5.523 4.477-10 10-10s10 4.477 10 10v13"></path> </svg>
+      </a>
+      <div class="basket-amount">1</div>
+    </div>
+    <div class="add">
+      <div class="add-block">
+        <p class="add-descr">
+          Зип худи Stone Island черная 64220 добавлено в избранное
+        </p>
+        <a href="#" class="add-link">
+          <svg role="presentation" class="add-icon" width="9px" height="18px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd"> <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect> <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect> </g> </svg>
+        </a>
+      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="delighters-master/src/delighters.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.18/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.18/js/intlTelInput-jquery.min.js" integrity="sha512-Bc9LELGc9+AYg+/BYBR9O8OEc3JrwZi8OHFwdTqYeYymMUpexQLkp01q/xTMyS3aE8TLdMSV1W3at2pBo4BlSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.18/js/utils.min.js" integrity="sha512-Uyf+0OJZ2DBNO2156wplv4+1FZuZVsguTkfrO//Kg+BjaaauYSQWGJZBXmQiFkIrKsYQeUdnFi3zYZxGTsc2Mg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>
     <script type="text/javascript" src="js/app.js"></script>
 	</body>
 </html>

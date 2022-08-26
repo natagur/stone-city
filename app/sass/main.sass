@@ -1,3 +1,8 @@
+@keyframes t706_countdown
+	0%
+		stroke-dashoffset:35
+	100%
+		stroke-dashoffset:102
 *,
 *::before,
 *::after 
@@ -8,12 +13,18 @@
 *:focus
 	outline: 0
 
-
+.body-scroll
+	overflow: hidden
 .container
 	margin: 0 auto
 	padding-left: 75px
 	padding-right: 75px
-
+	@media (max-width: 1200x)
+		padding-left: 15px
+		padding-right: 15px
+	@media (max-width: 1000px)
+		padding-left: 25px
+		padding-right: 25px
 
 a
 	color: inherit
@@ -42,6 +53,26 @@ header
 	box-sizing: border-box
 	background: #FFF
 
+
+.delighter 
+	transition: all .7s ease-out
+	transform: translateY(60%)
+	opacity: 0
+.started
+	transform: none
+	opacity: 1
+.ended
+	transform: translateY(-20%)
+	// &:nth-child(1)
+	// 	transition: all .1s ease-out
+	// 	transform: translateY(-20%)
+	// &:nth-child(2)
+	// 	transition: all .6s ease-out
+	// 	transform: translateY(-20%)
+	// &:nth-child(1)
+	// 	transition: all .15s ease-out
+	// 	transform: translateY(-20%)
+
 .content-sidebar-title
 	cursor: initial
 	font-weight: 500
@@ -49,6 +80,8 @@ header
 	font-size: 14px
 	line-height: 22px
 	color: #000
+	@media (max-width: 1000px)
+		display: none
 
 .excerpt-link
 	font-size: 14px
@@ -56,11 +89,51 @@ header
 	color: #000
 	line-height: 22px
 	border-bottom: 1px dashed #000
+.excerpt-link.close
+	display: none
+	
 
+.mobile-link
+	display: none
+	@media (max-width: 1000px)
+		display: block
+		transition: opacity .1s ease-in
+		font-size: 12px
+		font-weight: 300
+		color: #000
+		margin-bottom: 10px
+		position: relative
+		border-bottom: 1px solid rgba(0,0,0,.2)
+		padding-bottom: 10px
+		&::before
+			content: ' '
+			width: 10px
+			height: 10px
+			position: absolute
+			border-style: solid
+			border-width: 1px
+			border-color: transparent #000 #000 transparent
+			transform: rotate(-50deg)
+			right: 15px
+			top: 5px
+			margin: auto
+		&:hover
+			opacity: .5
+		&:focus
+			opacity: .5
+		&.active
+			border-bottom: 0px solid rgba(0,0,0,.2)
+			&::before
+				transform: rotate(39deg)	
+			+ .polzunok-container.mobile-link-list
+				display: flex !important
 // header//
 
 .header
 	height: 100vh 
+	margin-bottom: 3px
+	@media (max-width: 1000px)
+		margin-bottom: 45px
 	&::before
 		content: ''
 		display: block
@@ -69,7 +142,7 @@ header
 		background-position-x: 203%
 		position: absolute
 		bottom: 0
-		height: 20%
+		height: 38%
 		width: 100%
 		z-index: 1
 		margin-bottom: -2px
@@ -103,6 +176,10 @@ header
 						bottom: 3px
 					&:nth-child(3) 
 						top: 9px
+		.cross
+			display: none
+			@media (max-width: 1000px)
+				display: block
 		.header-nav
 			position: relative
 			display: flex
@@ -113,59 +190,67 @@ header
 			width: 100%
 			top: 0
 			@media (max-width: 1000px)
-				display: block
+				display: none
 				width: 16%
 				position: fixed
 				height: 100%
 				right: 0
 				top: 0
 				background-color: #000000
-				z-index: 1
-				.cross
-					width: 24px
-					height: 20px
+				z-index: 2
+			@media (max-width: 700px)
+				width: 28%
+			@media (max-width: 360px)
+				width: 56%
+			.cross
+				width: 24px
+				height: 20px
+				transform: rotate(0deg)
+				z-index: 999
+				float: right
+				position: relative
+				margin-right: -23px
+				margin-top: -33px
+				span
+					display: block
+					position: absolute
+					width: 100%
+					opacity: 1
+					left: 0
+					-webkit-transform: rotate(0deg)
+					-moz-transform: rotate(0deg)
+					-o-transform: rotate(0deg)
 					transform: rotate(0deg)
-					z-index: 999
-					float: right
-					position: relative
-					margin-right: 15px
-					margin-top: 10px
-					span
-						display: block
-						position: absolute
-						width: 100%
-						opacity: 1
-						left: 0
-						-webkit-transform: rotate(0deg)
-						-moz-transform: rotate(0deg)
-						-o-transform: rotate(0deg)
-						transform: rotate(0deg)
+					height: 2px
+					background-color: #fff
+					&:nth-child(1) 
+						top: 8px
+						width: 0%
+						left: 50%
 						height: 2px
-						background-color: #fff
-						&:nth-child(1) 
-							top: 8px
-							width: 0%
-							left: 50%
-							height: 2px
-						&:nth-child(2) 
-							transform: rotate(45deg)
-							height: 2px
-							top: 8px
-						&:nth-child(3) 
-							transform: rotate(-45deg)
-							height: 2px
-							top: 8px
-						&:nth-child(4) 
-							top: 8px
-							width: 0
-							left: 50%
-							height: 2px
+					&:nth-child(2) 
+						transform: rotate(45deg)
+						height: 2px
+						top: 8px
+					&:nth-child(3) 
+						transform: rotate(-45deg)
+						height: 2px
+						top: 8px
+					&:nth-child(4) 
+						top: 8px
+						width: 0
+						left: 50%
+						height: 2px
 			.header-nav-list
 				display: flex
-				width: 12%
+				width: 21%
+				@media (max-width: 1200px)
+					width: 20%
+				@media (max-width: 1300px)
+					width: 22%
 				@media (max-width: 1000px)
 					display: block
-					padding: 48px 40px 38px
+					padding: 48px 40px 119px
 					width: 100%
 				.header-nav-item
 					margin-right: 30px
@@ -193,6 +278,17 @@ header
 					height: 70px
 				@media (max-width: 1000px)
 					display: none
+			.address-mobile
+				display: none
+				@media (max-width: 1000px)
+					display: block
+					font-size: 13px
+					color: #fff
+					margin-top: 25px
+					font-style: normal
+					padding-left: 40px
+					padding-right: 38px
+					margin-bottom: 24px
 			.header-nav-social
 				display: flex
 				justify-content: end
@@ -201,15 +297,31 @@ header
 					margin-right: 10px
 					&:last-child
 						margin-right: 0
+				@media (max-width: 1000px)
+					justify-content: center
+					width: auto
+
+.border
+	transition: width .6s ease
+	position: fixed
+	border-top: 4px solid #000
+	top: 0
+	width: 0%
+	z-index: 1
 
 .search
 	.container
 		padding-left: 110px
 		padding-right: 110px
+		@media (max-width: 1000px)
+			padding-left: 30px
+			padding-right: 30px
 		.search-block
 			display: flex
 			justify-content: right
 			margin-bottom: 20px
+			@media (max-width: 1000px)
+				display: none
 			.search-link
 				margin-right: 20px
 				display: flex
@@ -245,15 +357,55 @@ header
 		height: 90vh
 		overflow: hidden
 		margin-bottom: 65px
+		@media (max-width: 1000px)
+			height: 100%
+			display: block
 		.content-sidebar
 			width: 18%
 			overflow-y: scroll
 			margin-right: 10px
 			padding-right: 10px
 			padding-left: 15px
+			@media (max-width: 1200px)
+				padding-right: 45px
+				padding-left: 0px
+			@media (max-width: 1000px)
+				padding-right: 0px
+				padding-left: 0px
+				width: 100%
+				margin-bottom: 40px
+					
+			.search-block.mobile	
+				display: none
+				@media (max-width: 1000px)
+					display: block
+					@media (max-width: 1000px)
+						padding-top: 10px
+						border-top: 1px solid rgba(0,0,0,.2)
+				
+				.mobile-link-list
+					display: none
+					margin-bottom: 25px
+					.mobile-link-item
+						margin-bottom: 5px
+						width: 100%
+						padding: 5px 0 5px 5px
+						&:hover
+							background-color: rgba(130,130,130,.2)
+						&:focus
+							background-color: rgba(130,130,130,.2)
+						.mobile-link-choice
+							font-size: 12px
+							font-weight: 400
+							color: #000
 			.content-sidebar-slider
+				margin-bottom: 25px
 				.polzunok-container
 					// justify-content: space-between
+					@media (max-width: 1000px)
+							display: none
+							width: 80%
+							margin-bottom: 25px
 					&:after 
 						content: ""
 						clear: both
@@ -264,7 +416,9 @@ header
 						height: 2px
 						border-radius: 10px
 						margin-bottom: 15px
-						
+						width: 100%
+						@media (max-width: 1000px)
+							display: none
 						.ui-slider-handle 
 							position: absolute
 							margin-left: -16px
@@ -297,6 +451,12 @@ header
 						outline: 0
 						border: 1px solid #ccc
 						font-style: oblique
+						font-size: 14px
+						font-weight: 100
+						@media (max-width: 1000px)
+							width: 35%
+							padding: 4px 6px
+							opacity: .7
 					
 					.polzunok-input-right 
 						float: right
@@ -307,73 +467,143 @@ header
 						outline: 0
 						border: 1px solid #ccc
 						font-style: oblique
-						
-			.content-sidebar-general
-				margin-bottom: 30px
-				.content-sidebar-general-list
-					.content-sidebar-general-item
-						margin-bottom: 10px
-						.content-sidebar-general-link
-							font-weight: 400
-							font-size: 15px
-							cursor: pointer
-							line-height: 20px
-							transition: all 0.3s ease
-							&:hover
-								opacity: .7
-								font-weight: 600
-							&:focus
-								opacity: .7
-								font-weight: 600
-
-			.content-sidebar-choice
-				margin-bottom: 30px
-				.content-sidebar-choice-list
-					.content-sidebar-choice-item
 						font-size: 14px
-						color: #000
-						line-height: 22px
-						font-weight: 400
-						margin-bottom: 15px
-						opacity: .8
-						label
-							position: relative
-							padding-left: 25px
-							cursor: pointer
-							&::after
-								content: ""
-								border: 2px solid #000
-								width: 20px
-								height: 20px
-								display: block
-								position: absolute
-								top: 1px
-								opacity: .6
-						input
+						font-weight: 100
+						@media (max-width: 1000px)
+							width: 35%
+							padding: 4px 6px
+							margin-right: 10px
+							opacity: .7
+					div
+						width: 15%
+						.polzunok-link
 							display: none
-						input + label
-							&:before
-								display: none
-						input:checked + label
-							opacity: 1
-							&::after
-								opacity: 1
-							&:before
-								content: ''
-								position: absolute
+							@media (max-width: 1000px)
 								display: block
-								left: 8px
-								width: 6px
-								height: 11px
-								top: 4px
-								border: solid #000
-								border-width: 0 2px 2px 0
-								transform: rotate(45deg)
-			
-			.content-sidebar-choice.scroll
-				overflow-y: scroll					
-									
+								font-size: 16px
+								padding-top: 2px
+								padding-bottom: 2px
+								color: #111
+								border: 1px #ddd solid
+								background: #f8f8f8
+								text-align: center
+								text-transform: uppercase
 
+		.content-sidebar-slider-block
+			@media (max-width: 1000px)
+				display: none
+		.content-sidebar-general
+			margin-bottom: 30px
+			.content-sidebar-general-list
+				@media (max-width: 1000px)
+					display: flex
+					justify-content: center
+					width: 86%
+					margin: auto
+					flex-wrap: wrap
+				@media (max-width: 360px)
+					width: 100%
+				.content-sidebar-general-item
+					margin-bottom: 10px
+					@media (max-width: 1000px)
+						margin-right: 30px
+					.content-sidebar-general-link
+						font-weight: 400
+						font-size: 15px
+						cursor: pointer
+						line-height: 20px
+						transition: all 0.3s ease600
+						@media (max-width: 1000px)
+							font-weight: 600
+						&:hover
+							opacity: .7
+							font-weight: 600
+						&:focus
+							opacity: .7
+							font-weight: 600
+							@media (max-width: 1000px)
+								opacity: .7
+								font-weight: 600
+
+		.content-sidebar-choice
+			margin-bottom: 30px
+			@media (max-width: 1000px)
+				margin-bottom: 0px
+			.content-sidebar-choice-list
+				@media (max-width: 1000px)
+					display: none
+					overflow-x: scroll
+					max-height: 210px
+					margin-bottom: 25px
+				.content-sidebar-choice-item
+					font-size: 14px
+					color: #000
+					line-height: 22px
+					font-weight: 400
+					margin-bottom: 15px
+					opacity: .8
+					label
+						position: relative
+						padding-left: 25px
+						cursor: pointer
+						&::after
+							content: ""
+							border: 2px solid #000
+							width: 20px
+							height: 20px
+							display: block
+							position: absolute
+							top: 1px
+							opacity: .6
+					input
+						display: none
+					input + label
+						&:before
+							display: none
+					input:checked + label
+						opacity: 1
+						&::after
+							opacity: 1
+						&:before
+							content: ''
+							position: absolute
+							display: block
+							left: 8px
+							width: 6px
+							height: 11px
+							top: 4px
+							border: solid #000
+							border-width: 0 2px 2px 0
+							transform: rotate(45deg)
+				.invisible
+					display: none
+					@media (max-width: 1000px)
+						display: block
+			.content-sidebar-excerpt
+				@media (max-width: 1000px)
+					display: none
+		.content-sidebar-choice.scroll
+			overflow-y: scroll					
+			max-height: 210px						
+		.content-block-filter
+			display: none
+			@media (max-width: 1000px)
+				display: flex
+				justify-content: space-between
+				padding-bottom: 25px
+				&:hover
+					opacity: .7
+				&:focus
+					opacity: .7
+				.filter-click
+					display: flex
+			.icon-filter
+				margin-right: 10px
+			.icon-filter path
+				fill: #1d1d1b
+			.filter-desc
+				font-size: 15px
+				font-weight: 600
 		.content-catalog
 			width: 82%
 			display: flex
@@ -381,28 +611,145 @@ header
 			overflow: auto
 			&::-webkit-scrollbar
 				width: 0
+			@media (max-width: 1000px)
+				justify-content: center
+				width: 100%
+			@media (max-width: 768px)
+				width: 100%
+				justify-content: space-between
+			@media (max-width: 450px)
+				display: block
 			.content-catalog-block
 				width: 31%
 				margin-right: 20px
 				min-height: 500px
 				margin-bottom: 20px
+				position: relative
+				&:nth-child(3n+2)
+					transition-delay: 0.2s
+					position: relative
+				&:nth-child(3n+3)
+					transition-delay: 0.2s
 				&:last-child
 					margin-right: 0
+				@media (max-width: 1200px)
+					width: 30%
+					min-height: 399px
+					margin-bottom: 50px
+				@media (max-width: 1000px)
+					width: 47%
+					min-height: 399px
+					margin-bottom: 50px
+					transform: none
+					opacity: 1
+				@media (max-width: 768px)
+					width: 46%
+					margin-right: 0px
+				@media (max-width: 450px)
+					width: 100%
+					&:nth-child(2n)
+						.content-catalog-block-bg
+							margin-right: 0px
+				.content-catalog-icon
+					padding: 2px
+					background: #fff
+					border-radius: 100%
+					position: absolute
+					z-index: 1
+					right: 10px
+					top: 10px
+					width: 30px
+					height: 30px
+					&>svg
+						width: 23px
+						height: 22px
+						padding-top: 5px
+						padding-left: 3px
+						transition: all ease 0.2s
+						path 
+							width: 23px
+							height: 22px
+							padding-top: 5px
+							padding-left: 3px
+							transition: all ease 0.2s
+					&:focus
+						svg
+							fill: #ed5952
+							transform: scale(1.1)
+							stroke: #ed5952
+							path 
+								stroke: #ed5952
+					&:hover
+						svg
+							fill: #ed5952
+							transform: scale(1.1)
+							stroke: #ed5952
+							path 
+								stroke: #ed5952
+					
+
 				.content-catalog-block-bg
 					background: url("/img/catalog-product.jpg")
 					background-size: cover
-					min-height: 333px
+					min-height: 307px
 					margin-bottom: 20px
 					&:hover
 						background: url("/img/catalog-product1.jpg")
 						background-size: cover
-						min-height: 333px
+						min-height: 307px
 						margin-bottom: 20px
+						@media (max-width: 1200px)
+							background-size: contain
+							min-height: 255px
+							background-repeat: no-repeat
+						@media (max-width: 1000px)
+							background-size: cover
+							background-repeat: no-repeat
+							min-height: 436px
+						@media (max-width: 768px)
+							margin-right: 0px
+							background-size: cover
+							min-height: 302px
+						@media (max-width: 600px)
+							min-height: 254px
+						@media (max-width: 450px)
+							min-height: 425px
+						@media (max-width: 360px)
+							min-height: 270px
+							background-size: contain
+
+					@media (max-width: 1200px)
+						background-size: contain
+						min-height: 255px
+						background-repeat: no-repeat
+					@media (max-width: 1000px)
+						background-size: cover
+						background-repeat: no-repeat
+						min-height: 407px
+						
+					@media (max-width: 768px)
+						background-size: cover
+						min-height: 302px
+						margin-right: 0px
+
+					@media (max-width: 600px)
+						min-height: 254px
+
+					@media (max-width: 450px)
+						min-height: 407px
+
+					@media (max-width: 360px)
+						min-height: 270px
+						background-size: contain
 				.content-catalog-link
 					margin-bottom: 20px
 					font-size: 20px
 					line-height: 27px
 					font-weight: 600
+					display: block
+					@media (max-width: 1000px)
+						font-size: 18px
+						margin-bottom: 32px
 				.content-catalog-block-info
 					display: flex
 					margin-right: 20px
@@ -450,6 +797,8 @@ header
 		max-width: 760px
 		margin: auto
 		margin-bottom: 75px
+		@media (max-width: 360px)
+			margin-bottom: 0px
 		.content-description-text
 			font-size: 20px
 			font-weight: 300
@@ -458,6 +807,7 @@ header
 			line-height: 31px
 			&:last-child
 				margin-bottom: 0
+
 
 .about
 	background: #000
@@ -477,17 +827,38 @@ header
 		width: 100%
 		z-index: 1
 		transform: rotate(180deg)
+	@media (max-width: 1000px)
+		.container 
+			padding-left: 154px
+			padding-right: 154px
+			@media (max-width: 1000px)
+				padding-left: 154px
+				padding-right: 154px
+			@media (max-width: 800px)
+				padding-left: 50px
+				padding-right: 50px
+			@media (max-width: 500px)
+				padding-left: 50px
+				padding-right: 50px
 	.about-block
 		display: flex
 		justify-content: space-between
+		@media (max-width: 1000px)
+			display: block
 		.about-bg
 			background: url('/img/about-bg.jpg')
 			background-size: cover
 			width: 41%
 			min-height: 383px
 			border-radius: 10px
+			@media (max-width: 1000px)
+				width: 100%
+				box-shadow: 0px 8px 70px 1px grey
+				margin-bottom: 30px
 		.about-info
 			width: 50%
+			@media (max-width: 1000px)
+				width: 100%
 			.about-info-title
 				font-size: 42px
 				color: #fff
@@ -499,31 +870,66 @@ header
 				line-height: 28px
 				color: #fff
 				font-weight: 400
+				@media (max-width: 1000px)
+					font-size: 15px
 
 .footer
 	background: #000
+	@media (max-width: 1000px)
+		.container
+			padding-left: 179px
+			padding-right: 170px
+			@media (max-width: 800px)
+				padding-left: 50px
+				padding-right: 50px
+			@media (max-width: 500px)
+				padding-left: 50px
+				padding-right: 50px
 	.footer-block
 		padding-top: 40px
 		border-top: 1px solid #fff
 		display: flex
 		justify-content: space-between
 		padding-bottom: 100px
+		@media (max-width: 1000px)
+			flex-wrap: wrap
+			justify-content: center
+			flex-direction: row-reverse
+		@media (max-width: 700px)
+			flex-direction: column-reverse
 		.footer-block-logo
-			width: 21%
+			width: 17%
 			margin-top: 15px
+			margin-right: 25px
 			&>img 
 				max-width: 261px
 				min-height: 90px
+				@media (max-width: 1000px)
+					display: none
+			@media (max-width: 1000px)
+				display: none
 			.footer-logo-link
 				font-size: 18px
 				color: #fff
 				font-weight: 400
 				opacity: 0.5
 				line-height: 30px
+				@media (max-width: 1000px)
+					display: none
 
 		.footer-block-contacts
 			width: 40%
 			display: flex
+			@media (max-width: 1000px)
+				width: 60%
+				align-items: center
+			@media (max-width: 900px)
+				display: block
+				width: 42%
+				margin-top: 20px
+			@media (max-width: 700px)
+				text-align: center
+				width: 100%
 			.footer-block-contacts-bg
 				background: url('/img/footer-bg.jpg')
 				background-size: cover
@@ -531,22 +937,77 @@ header
 				height: 114%
 				border-radius: 10px
 				margin-right: 50px
+				@media (max-width: 1000px)
+					width: 51%
+					height: 45%
+					margin-right: 14px
+				@media (max-width: 900px)
+					display: none
 			.footer-block-contacts-choice
 				margin-top: 35px
+				@media (max-width: 1000px)
+					margin-top: 0px
 				.footer-block-address
 					font-size: 22px
 					color: #fff
 					line-height: 34px
 					font-weight: 400
 					font-style: normal
+					margin-bottom: 10px
+					// display: block
+					&:last-child
+						madgin-bottom: 0
+					@media (max-width: 1000px)
+						margin-bottom: 10px
+					@media (max-width: 900px)
+						margin-bottom: 19px
+						display: block
+					@media (max-width: 360px)
+						font-size: 20px
+						margin-bottom: 10px
+				.footer-block-small.mobile
+					display: none
+					@media (max-width: 1000px)
+						display: block
+						font-size: 14px
+						font-weight: 400
+						color: #ffffff
+						opacity: 0.65
 			
 		.footer-block-social
 			margin-top: 35px
+			@media (max-width: 1000px)
+				width: 40%
+			@media (max-width: 900px)
+				width: 53%
+				margin-top: 0px
+				margin-bottom: 17px
+			@media (max-width: 700px)
+				width: 100%
+				text-align: center
 			.footer-block-social-flex
 				margin-bottom: 10px
+				@media (max-width: 1000px)
+					margin-bottom: 0px
+				.footer-logo
+					display: none
+					@media (max-width: 1000px)
+						display: block
+						max-width: 234px
+						min-height: 76px
+					@media (max-width: 700px)
+						margin: auto
+				.footer-block-small.mobile
+					display: none
+					@media (max-width: 1000px)
+						display: block
 				.footer-block-social-top
 					display: flex
 					margin-bottom: 10px
+					@media (max-width: 700px)
+						justify-content: center
+					@media (max-width: 500px)
+						display: block
 					&:last-child
 						margin-bottom: 0
 					.footer-block-social-link
@@ -555,23 +1016,1152 @@ header
 						font-weight: 400
 						line-height: 34px
 						margin-right: 20px
+						@media (max-width: 1000px)
+							display: block
 
 			.footer-small
+				@media (max-width: 700px)
+
 				.footer-block-small
 					font-size: 14px
 					color: #fff
 					font-weight: 400
 					line-height: 34px
+					@media (max-width: 1000px)
+						display: none
+				.footer-logo-link.mobile
+					display: none
+					@media (max-width: 1000px)
+						display: block
+						color: #ffffff
+						font-size: 18px
+						opacity: 0.5
+						font-weight: 400
+						margin-top: -17px
 
 		.footer-arrow
+			transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out
+			margin-top: 30px
+			&:hover
+				transform: scale(1.2)
+			@media (max-width: 700px)
+				display: none
 			.footer-arrow-link img
 				max-width: 101px
 				min-height: 101px
 
 
 
-			
+// товар//		
+.header-product
+	margin-top: 30px
+	margin-bottom: 50px	
+	.bread-crumbs
+		display: flex
+		justify-content: space-between
+		margin-left: 20px
+		margin-right: 20px
+		.bread-crumbs-link
+			&::before
+				content: "←\a0"
+				font-family: Arial,Helvetica,sans-serif
+.product
+	opacity: 0
+	transform: translateY(20%)
+	&.started
+		opacity: 1
+		transform: translateY(0)
+	.product-content
+		display: flex
+		margin-bottom: 60px
+		@media (max-width: 800px)
+			display: block
+		.product-slider
+			width: 50%
+			margin-right: 40px
+			@media (max-width: 800px)
+				width: 100%
+				margin-bottom: 60px
+				margin-right: 0px
+			&.open
+				position: fixed
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: white
+				z-index: 2
+				.product-slider-img-list
+					max-height: 100%
+				.your-class2
+					display: none
+				.js-image-zoom__zoomed-image
+					background-color: rgb(255, 255, 255)
+				.product-slider-icon-open
+					display: block
+					position: absolute
+					right: 25px
+					top: 30px
+					&>a
+						&:first-child
+							margin-right: 20px
+			.product-slider-icon-open
+				display: none
+			.slider-list-garden
+				// padding-right: 5px
+			.your-class
+				padding-bottom: 5px
+				max-height: 90vh
+				max-width: 60vw
+				margin: auto
+				margin-top: 5vh
+				overflow: hidden
+				.slick-current
+					cursor: zoom-in
+					// &:hover
+					// 	transform: scale(3.5)
+				.slick-prev
+					width: 40px
+					height: 40px
+					background-color: rgba(255,255,255,1)
+					border-radius: 100%
+					z-index: 1
+					left: 40px
+					&::before
+						content: ''
+						background: url('/img/arrow-slider.svg')
+						z-index: 1
+						background-size: contain
+						width: 28px
+						height: 20px
+						background-repeat: no-repeat
+						display: block
+						background-position-x: 4px
+						transform: rotate(180deg)
+				.slick-next
+					width: 40px
+					height: 40px
+					background-color: rgba(255,255,255,1)
+					border-radius: 100%
+					z-index: 1
+					right: 40px
+					&::before
+						content: ''
+						background: url('/img/arrow-slider.svg')
+						z-index: 1
+						background-size: contain
+						width: 28px
+						height: 20px
+						background-repeat: no-repeat
+						display: block
+						background-position-x: 16px
+				.slick-slide img
+					margin: auto
+			.your-class2
+				.slick-track
+					display: flex
+					.slick-active
+						margin-right: 5px
+						border: 2px solid transparent
+					.slick-current
+						border: 2px solid rgba(0,0,0,.15)
+					.slick-prev
+						display: none
+					.slick-next
+						display: none
+		.product-description
+			width: 50%
+			margin-top: 35px
+			@media (max-width: 800px)
+				width: 100%
+			.product-descr
+				margin-bottom: 10px
+				.product-title
+					margin-bottom: 10px
+				.prosuct-span
+					color: #777
+					font-size: 14px
+					font-weight: 300
+					margin-bottom: 20px
+					display: block
+				.product-desc
+					font-weight: 500
+					font-size: 20px
+					color: #000
+				.product-desc-hidden
+					display: none
+					color: #f95d51
+					font-size: 14px
+					font-weight: 400
+					&.active
+						display: block
+
+			.product-label
+				margin-bottom: 30px
+				.product-label-text
+					font-size: 14px
+					font-weight: 300
+					color: #000
+					margin-bottom: 10px
+				.content-sidebar-choice-list
+					margin-bottom: 25px
+					.content-sidebar-choice-item
+						margin-bottom: 12px
+						font-size: 14px
+						font-weight: 100
+						color: #000
+						label
+							position: relative
+							padding-left: 25px
+							cursor: pointer
+							&::after
+								content: ""
+								border: 1px solid rgba(0,0,0,.2)
+								width: 20px
+								height: 20px
+								display: block
+								position: absolute
+								top: 1px
+								opacity: .7
+								border-radius: 100%
+						input
+							display: none
+						input + label
+							&:before
+								display: none
+						input:checked + label
+							// opacity: 0.7
+							&::after
+								border: 1px solid rgba(0,0,0,.5)
+							&:before
+								content: ''
+								position: absolute
+								display: block
+								left: 4px
+								width: 9px
+								height: 6px
+								top: 5px
+								border: solid rgba(0,0,0,.5)
+								border-width: 6px
+								// opacity: 0.7
+								border-radius: 100%
+				.product-label-color
+					padding: 7px
+					border: 1px solid #000
+					display: initial
+					font-size: 14px
+					font-weight: 300
+					cursor: pointer
+					text-align: center
+			.product-btn
+				margin-bottom: 50px
+				position: relative
+				.btn-link
+					background-color: #000000
+					font-size: 14px
+					padding: 15px 30px 15px 30px
+					font-weight: 700
+					color: #fff
+					border-radius: 3px
+					margin-right: 10px
+				.content-catalog-icon
+					padding: 2px
+					background: #fff
+					border: 1px solid #e4e4e4
+					border-radius: 100%
+					position: absolute
+					z-index: 1
+					top: -7px
+					width: 30px
+					height: 30px
+					&>svg
+						width: 23px
+						height: 22px
+						padding-top: 5px
+						padding-left: 2px
+						transition: all ease 0.2s
+						path 
+							width: 23px
+							height: 22px
+							padding-top: 5px
+							padding-left: 3px
+							transition: all ease 0.2s
+					&:focus
+						svg
+							fill: #ed5952
+							transform: scale(1.1)
+							stroke: #ed5952
+							path 
+								stroke: #ed5952
+					&:hover
+						svg
+							transform: scale(1.1)
+							stroke: #ed5952
+							path 
+								stroke: #000
+			.product-info
+				.product-subtitle
+					font-weight: 700
+					font-size: 18px
+					margin-bottom: 30px
+					.product-subtitle-span
+						font-size: 18px
+						font-weight: 100
+				p
+					font-size: 16px
+					font-weight: 100
+					margin-bottom: 30px
+				.product-info-list
+					.product-info-item
+						margin-bottom: 10px
+						font-size: 18px
+						font-weight: 100
+						&:nth-child(3)
+							font-weight: 700
+						&:nth-child(4)
+							font-weight: 700
+							
+.product-details
+	margin-bottom: 100px
+	.details
+		&:last-child .product-details-flex
+			border-bottom: 1px solid #eee
+			&.active
+				border-bottom: 0px solid #eee
+		.product-details-flex 
+			display: flex
+			justify-content: space-between
+			border-top: 1px solid #eee
+			padding-top: 20px
+			padding-bottom: 20px
+			align-items: center
+			.product-summary
+				font-weight: 500
+				font-size: 16px
+				color: #000
+			.product-summary-icon
+				padding: 5px 8px
+				transition: all ease-in-out .3s
+				border-radius: 100%
+				&:hover
+					background-color: #eee
+				.product-summary-icon-close
+					transform: translate(0px, 3px)
+			&.active .product-summary-icon
+				transform: rotate(-45deg)
+				background-color: #eee
+		.product-details-flex.active + .product-details-info
+			max-height: 219px
+			height: 219px
+		.product-details-flex.active + .product-details-list-choice
+			max-height: 419px
+			height: 419px
+		.product-details-info
+			max-height: 0
+			overflow: hidden
+			transition: all 0.5s ease-out
+			.product-details-list
+				// margin-bottom: 30px
+				.product-details-item
+					font-weight: 300
+					font-size: 14px
+					color: #000
+					.descr
+						font-weight: 700
+						font-size: 14px
+						// margin-right: 5px
+						// margin-left: 5px
+			h4
+				font-size: 14px	
+		.product-details-list-choice
+			max-height: 0
+			overflow: hidden
+			transition: all 0.5s ease-out
+			.product-details-list
+				margin-bottom: 30px
+				.product-details-item
+					display: flex
+					font-weight: 300
+					font-size: 14px
+					color: #000
+					margin-bottom: 10px
+					.descr
+						font-weight: 700
+						font-size: 14px
+						margin-right: 5px
+						// margin-left: 5px
+		.address
+			color: #ff8562
+			font-size: 14px
+			font-weight: 300
+			margin-bottom: 25px
+			font-style: inherit
+			margin-top: 10px
+
+.promo
+	.promo-descr
+		margin-bottom: 40px
+		font-size: 22px
+		font-weight: 600
+		color: #000
+	.content-catalog
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		overflow: auto
+		&::-webkit-scrollbar
+			width: 0
+		@media (max-width: 1000px)
+			justify-content: center
+			width: 100%
+		@media (max-width: 768px)
+			width: 100%
+			justify-content: space-between
+		@media (max-width: 450px)
+			display: block
+		.content-catalog-block
+			width: 23%
+			margin-right: 20px
+			min-height: 500px
+			margin-bottom: 20px
+			position: relative
+			&:last-child
+				margin-right: 0
+			&:nth-child(2)
+				transition-delay: 0.2s
+			&:nth-child(3)
+				transition-delay: 0.4s
+			&:nth-child(4)
+				transition-delay: 0.6s
+			@media (max-width: 1000px)
+				width: 47%
+				min-height: 399px
+				margin-bottom: 50px
+				transform: none
+				opacity: 1
+			@media (max-width: 768px)
+				width: 46%
+				margin-right: 0px
+			@media (max-width: 450px)
+				width: 100%
+				&:nth-child(2n)
+					.content-catalog-block-bg
+						margin-right: 0px
+			.content-catalog-icon
+				padding: 2px
+				background: #fff
+				border-radius: 100%
+				position: absolute
+				z-index: 1
+				right: 10px
+				top: 10px
+				width: 30px
+				height: 30px
+				&>svg
+					width: 23px
+					height: 22px
+					padding-top: 5px
+					padding-left: 3px
+					transition: all ease 0.2s
+					path 
+						width: 23px
+						height: 22px
+						padding-top: 5px
+						padding-left: 3px
+						transition: all ease 0.2s
+				&:focus
+					svg
+						fill: #ed5952
+						transform: scale(1.1)
+						stroke: #ed5952
+						path 
+							stroke: #ed5952
+				&:hover
+					svg
+						fill: #ed5952
+						transform: scale(1.1)
+						stroke: #ed5952
+						path 
+							stroke: #ed5952
+				
+
+			.content-catalog-block-bg
+				background: url("/img/catalog-product.jpg")
+				background-size: contain
+				min-height: 280px
+				margin-bottom: 20px
+				background-repeat: no-repeat
+				&:hover
+					background: url("/img/catalog-product1.jpg")
+					background-size: contain
+					min-height: 280px
+					margin-bottom: 20px
+					background-repeat: no-repeat
+					@media (max-width: 1000px)
+						background-size: cover
+						background-repeat: no-repeat
+						min-height: 436px
+					@media (max-width: 768px)
+						margin-right: 0px
+						background-size: cover
+						min-height: 302px
+					@media (max-width: 600px)
+						min-height: 254px
+					@media (max-width: 450px)
+						min-height: 425px
+					@media (max-width: 360px)
+						min-height: 270px
+						background-size: contain
+
+				@media (max-width: 1000px)
+					background-size: cover
+					background-repeat: no-repeat
+					min-height: 407px
+					
+				@media (max-width: 768px)
+					background-size: cover
+					min-height: 302px
+					margin-right: 0px
+
+				@media (max-width: 600px)
+					min-height: 254px
+
+				@media (max-width: 450px)
+					min-height: 407px
+
+				@media (max-width: 360px)
+					min-height: 270px
+					background-size: contain
+			.content-catalog-link
+				margin-bottom: 20px
+				font-size: 20px
+				line-height: 27px
+				font-weight: 600
+				display: block
+				@media (max-width: 1000px)
+					font-size: 18px
+					margin-bottom: 32px
+			.content-catalog-block-info
+				display: flex
+				margin-right: 20px
+				.content-catalog-descr
+					font-size: 22px
+					line-height: 30px
+					font-weight: 500
+				.descr-new
+					color: #000
+					margin-right: 10px
+				.descr-old
+					color: #BDBDBD
+					text-decoration: line-through
+			.content-catalog-block-desc
+				color: #f95d51
+				font-size: 14px
+				font-weight: 400
+				margin-top: 10px
 
 
-	
+// доставка//
+.delivery-transform
+	opacity:0
+	transform: translateX(-2%)
+	&.ended
+		transform: translateY(0)
+		transform: translateX(0)
+	&.started
+		opacity: 0.7
+.delivery-border
+	opacity:0
+	width: 60%
+	margin: auto
+	&.ended
+		transform: translateY(0)
+		width: 100%
+	&.started
+		opacity: 0.7
+
+.delivery
+	width: 70%
+	margin-bottom: 50px
+	.delivery-title
+		color: #000000
+		font-size: 42px
+		font-weight: 500
+		margin-bottom: 10px
+		opacity:0
+		transform: translateX(-2%)
+		&.ended
+			transform: translateY(0)
+			transform: translateX(0)
+		&.started
+			opacity:1
+	.delivery-info
+		color: #000000
+		font-size: 24px
+		font-weight: 300
+		padding-bottom: 50px
+		margin-bottom: 20px
+		opacity:0
+		transform: translateX(-2%)
+		&.ended
+			transform: translateY(0)
+			transform: translateX(0)
+		&.started
+			opacity:1
+	.delivery-desc
+		color: #000000
+		font-size: 20px
+		font-weight: 400
+		margin-bottom: 20px
+		display: block
+		pacity:0
+		transform: translateX(-2%)
+		&.ended
+			transform: translateY(0)
+			transform: translateX(0)
+		&.started
+			opacity: 0.7
+	.delivery-border
+		border-bottom: 1px solid #a7a7a7
+		padding-bottom: 30px
+		margin-bottom: 50px
+	.delivery-subtitle
+		padding-top: 30px
+		margin-bottom: 20px
+		font-size: 20px
+		pacity:0
+		transform: translateX(-2%)
+		&.ended
+			transform: translateY(0)
+			transform: translateX(0)
+		&.started
+			opacity: 0.8
+	.delivery-span
+		margin-bottom: 20px
+		color: #000000
+		font-size: 16px
+		font-weight: 400
+		display: block
+		opacity:0
+		transform: translateX(-2%)
+		&.ended
+			transform: translateY(0)
+			transform: translateX(0)
+		&.started
+			opacity: 0.7
+
+
+.favorites
+	width: 60px
+	height: 60px
+	background-color: rgba(255,255,255,.8)
+	border-radius: 50px
+	position: fixed
+	bottom: 95px
+	right: 20px
+	z-index: 1
+	transition: transform 0.2s ease-in-out,-webkit-transform 0.2s ease-in-out
+	&:hover
+		transform: scale(1.1)
+	.favorites-icon
+		width: 34px
+		height: 34px
+		padding: 22px 13px 20px
+		position: relative
+		box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%)
+		border-radius: 100%
+		.favorites-icon-link
+			transform: translate(0px, 11px)
+	.basket-amount
+		background-color: red
+		color: #fff
+		border-radius: 30px
+		position: absolute
+		font-size: 14px
+		width: 24px
+		height: 24px
+		line-height: 24px
+		text-align: center
+		right: -7px
+.basket
+	width: 60px
+	height: 60px
+	background-color: rgba(255,255,255,.8)
+	border-radius: 50px
+	position: fixed
+	bottom: 20px
+	right: 20px
+	z-index: 1
+	transition: transform 0.2s ease-in-out,-webkit-transform 0.2s ease-in-out
+	&:hover
+		transform: scale(1.1)
+	.basket-icon
+		width: 34px
+		height: 34px
+		padding: 22px 13px 20px
+		position: relative
+		box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%)
+		border-radius: 100%
+		.basket-icon-link
+			transform: translate(0px, 10px)
+	.basket-amount
+		background-color: red
+		color: #fff
+		border-radius: 30px
+		position: absolute
+		font-size: 14px
+		width: 24px
+		height: 24px
+		line-height: 24px
+		text-align: center
+		right: -7px
+.popup 
+	position: fixed
+	background: #0000006b
+	width: 100%
+	height: 100%
+	top: 0px
+	left: 0px
+	display: none
+	z-index: 2
+	overflow-y: scroll
+	.close 
+		color: #fff
+		position: absolute
+		right: 5px
+		font-size: 20px
+		text-decoration: none
+		top: 20px
+		@media (max-width: 580px)			
+			right: 12px
+			&>svg
+				width: 18px
+	.wrapper 
+		max-width: 560px
+		min-height: 300px
+		margin: 1% auto
+		border-radius: 5px
+		position: relative
+		z-index: 1
+		background-color: rgba(255,255,255,1)
+		padding: 40px
+		overflow: hidden
+		@media (max-width: 580px)			
+			margin-top: 58px
+		.popup-content
+			text-align: center
+			padding: 10px
+			height: 90%
+			.popup-title
+				border-bottom: 1px solid rgba(0,0,0,.2)
+				font-size: 24px
+				font-weight: 600
+				color: #000
+				padding-bottom: 30px
+				text-align: left
+				margin-bottom: 16px
+				line-height: 24.8px
+			.popup-content-block
+				border-bottom: 1px solid rgba(0,0,0,.2)
+				padding-bottom: 16px
+				display: flex
+				margin-bottom: 30px
+				align-items: center
+				@media (max-width: 580px)
+					flex-wrap: wrap
+					position: relative
+				.popup-content-bg
+					background: url('/img/catalog-product.jpg')
+					background-repeat: no-repeat
+					display: block
+					background-size: contain
+					width: 20%
+					border-radius: 7%
+					margin-right: 20px
+					height: 82px
+				.popup-content-info
+					text-align: left
+					width: 39%
+					@media (max-width: 580px)
+						width: 61%
+					.popup-link
+						font-size: 16px
+						margin-bottom: 5px 
+						font-weight: 600
+						color: #000
+						line-height: 24.8px
+						display: block
+						
+					.popup-content-amount-link.mobile
+						display: none
+						@media (max-width: 580px)
+							display: block
+							position: absolute
+							right: 0
+							top: 6px
+					.popup-descr
+						opacity: .7
+						font-size: 12px
+						font-weight: 400
+						line-height: 18.6px
+				.popup-content-amount
+					display: flex
+					width: 53%
+					align-items: center
+					justify-content: space-between
+					&:hover
+						opacity: .7
+					@media (max-width: 580px)
+						width: 93%
+						justify-content: center
+					.popup-content-amount-left
+						width: 51%
+						.popup-minus
+							margin-right: 5px
+							dosplay: block
+						.popup-plus
+							margin-left: 5px
+							dosplay: block
+							margin-right: 15px
+						.popup-input
+							width: 33px
+							height: 25px
+							padding: 2px 5px
+							font-size: 16px
+							line-height: 16px
+							font-weight: 100
+							text-align: center
+							border: 0
+							&[type="text"]
+								border: 0
+								&:hover
+									border: 1px solid rgba(0,0,0,.3)
+								&:focus
+									border: 2px solid rgba(0,0,0,.3)
+									background: #d3d3d3
+								&:active
+									border: 2px solid rgba(0,0,0,.3)
+									background: #d3d3d3
+					.popup-content-amount-right
+						display: flex
+						.popup-content-amount-descr
+							font-size: 16px
+							color: #000
+							font-weight: 300
+							margin-right: 16px
+						.popup-content-amount-link
+							@media (max-width: 580px)
+								display: none
+
+			.delete
+				opacity: 1
+				transition: opacity 0.3s ease 0s
+				display: none
+				&.active
+					display: flex
+					justify-content: space-between
+				.popup-content-animation
+					width: 7%
+					position: relative
+					.timer-desc
+						font-weight: 600
+						font-size: 15px
+						color: #f95d51
+						position: absolute
+						left: 11px
+						top: 2px
+					.timer-icon
+						stroke-dasharray: 100
+						stroke-dashoffset: 0
+						stroke-linecap: round
+						stroke-width: 2px
+						stroke: #f95d51
+						fill: none
+						animation: t706_countdown 4s linear infinite forwards
+						width: 23px
+						height: 23px
+						transform: rotate(90deg) scaleX(-1)
+						
+				.popup-content-info
+					width: 88%
+					@media (max-width: 580px)
+						width: 50%
+					.popup-descr
+						font-size: 14px
+						font-weight: 300
+				.popup-content-amount
+					width: 9%
+					.delete-link
+						font-size: 14px
+						font-weight: 300
+
+
+			.form-block
+				.form-block-descr
+					font-size: 16px
+					text-align: right
+					font-weight: 600
+					color: #000
+					margin-bottom: 20px
+				.form
+					.form-descr
+						font-size: 16px
+						margin-bottom: 5px
+						font-weight: 300
+						color: #000
+						text-align: left
+					.form-input
+						padding: 20px 20px 20px 52px
+						font-size: 16px
+						border-radius: 20px
+						width: 100%
+						margin-bottom: 20px
+						border: 1px solid #000
+						font-size: 16px
+						color: #000
+						&[type="text"]
+							font-size: 16px
+							color: #000
+							font-weight: 400
+					.iti
+						width: 100%
+					.form-textarea
+						padding: 20px
+						color: #000000
+						border: 1px solid #000000
+						height: 102px
+						width: 100%
+						border-radius: 20px
+						&[type="text"]
+							font-size: 16px
+							color: #000
+							font-weight: 400
+
+
+					.form-price
+						margin-bottom: 45px
+						text-align: right
+						.form-price-span
+							display: block
+							font-size: 14px
+							font-weight: 400
+							margin-bottom: 5px
+						.form-price-descr
+							font-weight: 600
+							font-size: 16px
+					.form-button
+						text-align: center
+						font-size: 16px
+						padding-top: 20px
+						padding-bottom: 20px
+						width: 100%
+						font-weight: 700
+						color: #ffffff
+						background-color: #000000
+						border-radius: 20px
+						cursor: pointer
+					.form-radio
+						text-align: left
+						margin-bottom: 10px
+						input[type=radio]
+							display: none
+						input[type=radio] + label
+							position: relative
+							padding-left: 25px
+							cursor: pointer
+							margin-bottom: 20px
+							display: block
+							font-weight: 300
+							&::after
+								content: ""
+								border: 2px solid #000
+								width: 20px
+								height: 20px
+								display: block
+								position: absolute
+								top: 1px
+								opacity: .7
+								border-radius: 100%
+								left: 0px
+								opacity: .6
+							&:before
+								display: none
+						input[type=radio]:checked + label
+							// opacity: 0.7
+							&::after
+								opacity: 1
+							&:before
+								content: ""
+								position: absolute
+								display: block
+								left: 5px
+								top: 6px
+								border: solid #000
+								border-width: 5px
+								border-radius: 100%
+
+
+.popup-favorites
+	position: fixed
+	background-color: rgba(0,0,0,.1)
+	width: 100%
+	height: 100%
+	top: 0px
+	left: 0px
+	display: none
+	z-index: 2
+	overflow-y: scroll
+	.close 
+		color: #fff
+		position: absolute
+		right: 5px
+		font-size: 20px
+		text-decoration: none
+		top: 20px
+		z-index: 2
+		@media (max-width: 580px)			
+			right: 12px
+			&>svg
+				width: 18px
+	.wrapper 
+		max-width: 560px
+		min-height: 300px
+		width: 40%
+		height: 100%
+		box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%)
+		transition: all .3s ease
+		position: absolute
+		right: 0
+		z-index: 1
+		background-color: rgba(255,255,255,1)
+		padding: 40px
+		overflow: hidden
+		@media (max-width: 1000px)
+			width: 100%
+		@media (max-width: 580px)			
+			// margin-top: 58px
+		.popup-content
+			text-align: center
+			padding: 10px
+			height: 90%
+			.popup-title
+				border-bottom: 1px solid rgba(0,0,0,.2)
+				font-size: 24px
+				font-weight: 600
+				color: #000
+				padding-bottom: 30px
+				text-align: left
+				margin-bottom: 16px
+				line-height: 24.8px
+			.popup-content-block
+				border-bottom: 1px solid rgba(0,0,0,.2)
+				padding-bottom: 16px
+				display: flex
+				margin-bottom: 30px
+				align-items: center
+				@media (max-width: 580px)
+					position: relative
+				@media (max-width: 450px)
+					flex-wrap: wrap
+				.popup-content-bg
+					background: url('/img/catalog-product.jpg')
+					background-repeat: no-repeat
+					display: block
+					background-size: cover
+					width: 30%
+					border-radius: 10%
+					margin-right: 20px
+					height: 82px
+					@media (max-width: 580px)
+						width: 18%
+						height: 64px
+					@media (max-width: 400px)
+						height: 64px
+					@media (max-width: 350px)
+						width: 30%
+				.popup-content-info
+					text-align: left
+					width: 70%
+					@media (max-width: 580px)
+						width: 61%
+					@media (max-width: 350px)
+						width: 56%
+					.popup-link
+						font-size: 18px
+						margin-bottom: 5px 
+						font-weight: 600
+						color: #000
+						line-height: 24.8px
+						display: block
+						@media (max-width: 580px)
+							font-size: 14px
+						
+					.popup-content-amount-link.mobile
+						display: none
+						@media (max-width: 580px)
+							display: block
+							position: absolute
+							right: 0
+							top: 46px
+					.popup-descr
+						opacity: .7
+						font-size: 12px
+						font-weight: 400
+						line-height: 18.6px
+				.popup-content-amount
+					display: flex
+					width: 53%
+					align-items: center
+					justify-content: right
+					&:hover
+						opacity: .7
+					@media (max-width: 580px)
+						width: 29%
+						justify-content: center
+					@media (max-width: 450px)
+						width: 72%
+					@media (max-width: 580px)
+						height: 64px
+					.popup-content-amount-right
+						display: flex
+						.popup-content-amount-descr
+							font-size: 16px
+							color: #000
+							font-weight: 300
+							margin-right: 16px
+						.popup-content-amount-link
+							@media (max-width: 580px)
+								display: none
+
+
+.add
+	opacity: 1
+	right: 20px
+	position: fixed
+	bottom: 50px
+	background-color: #111
+	border-radius: 10px
+	z-index: 1
+	width: 29%
+	transform: translateX(150%)
+	transition: all .7s ease-out
+	@media (max-width: 580px)
+		width: 50%
+
+.ended
+	transform: translateX(0%)
+	.add-block
+		padding: 20px 30px
+		display: flex
+		.add-descr
+			color: #fff
+			font-size: 16px
+			font-weight: 400
+		.add-icon
+			position: absolute
+			right: 10px
+			top: 3px
+			cursor: pointer
+
+
 
